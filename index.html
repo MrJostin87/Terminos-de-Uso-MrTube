@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Términos de Uso - MrTube</title>
+<link rel="icon" href="avatar.PNG" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+--bg-primary: #0d0202;
+--bg-surface: #1c0505;
+--bg-card: rgba(35, 8, 8, 0.85);
+--bg-card-hover: rgba(50, 12, 12, 0.95);
+--border-color: #4a0d0d;
+--border-highlight: #ff2b2b;
+--accent-red: #e60000;
+--accent-glow: rgba(230, 0, 0, 0.4);
+--accent-bright: #ff4d4d;
+--text-main: #ffffff;
+--text-muted: #e0b0b0;
+--text-subtle: #996666;
+--shadow-red: 0 8px 30px rgba(230, 0, 0, 0.15);
+--transition-speed: 0.25s;
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: var(--bg-primary);
+color: var(--text-main);
+line-height: 1.7;
+background-image:
+radial-gradient(circle at 15% 20%, rgba(180, 0, 0, 0.15) 0%, transparent 45%),
+radial-gradient(circle at 85% 80%, rgba(120, 0, 0, 0.2) 0%, transparent 50%);
+background-attachment: fixed;
+min-height: 100vh;
+}
+/* BARRA DE NAVEGACIÓN */
+nav {
+background-color: rgba(13, 2, 2, 0.95);
+backdrop-filter: blur(10px);
+border-bottom: 2px solid var(--border-color);
+position: sticky;
+top: 0;
+z-index: 1000;
+padding: 12px 24px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.logo {
+font-size: 24px;
+font-weight: 900;
+color: var(--text-main);
+text-decoration: none;
+display: flex;
+align-items: center;
+gap: 4px;
+letter-spacing: -0.5px;
+}
+.logo span {
+background: linear-gradient(135deg, #ff0000, #b30000);
+color: #fff;
+padding: 3px 10px;
+border-radius: 6px;
+box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+.nav-actions {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.btn-nav {
+background: var(--bg-surface);
+color: var(--text-main);
+border: 1px solid var(--border-color);
+padding: 8px 16px;
+border-radius: 20px;
+font-size: 13px;
+font-weight: 600;
+cursor: pointer;
+text-decoration: none;
+transition: all var(--transition-speed);
+display: inline-flex;
+align-items: center;
+gap: 6px;
+}
+.btn-nav:hover {
+border-color: var(--accent-bright);
+background: var(--accent-red);
+box-shadow: 0 0 15px var(--accent-glow);
+}
+/* CONTAINER PRINCIPAL */
+.container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 40px 20px 80px 20px;
+}
+/* HERO HEADER */
+.header-hero {
+text-align: center;
+padding: 40px 20px;
+background: linear-gradient(180deg, rgba(60, 10, 10, 0.6) 0%, rgba(20, 3, 3, 0.8) 100%);
+border: 1px solid var(--border-color);
+border-radius: 20px;
+margin-bottom: 30px;
+box-shadow: var(--shadow-red);
+position: relative;
+overflow: hidden;
+}
+.header-hero::before {
+content: '';
+position: absolute;
+top: -50%;
+left: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle, rgba(255, 0, 0, 0.1) 0%, transparent 70%);
+pointer-events: none;
+}
+.badge-tag {
+display: inline-block;
+background: rgba(255, 0, 0, 0.2);
+color: var(--accent-bright);
+border: 1px solid var(--border-highlight);
+padding: 4px 14px;
+border-radius: 12px;
+font-size: 12px;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-bottom: 15px;
+}
+.header-hero h1 {
+font-size: 36px;
+font-weight: 900;
+margin-bottom: 12px;
+background: linear-gradient(90deg, #ffffff, #ff9999);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.header-hero p {
+color: var(--text-muted);
+font-size: 15px;
+max-width: 700px;
+margin: 0 auto 15px auto;
+}
+.last-updated {
+font-size: 12px;
+color: var(--text-subtle);
+font-weight: 600;
+}
+/* BARRA DE BÚSQUEDA INTERACTIVA */
+.search-box {
+margin-bottom: 30px;
+position: relative;
+}
+.search-input {
+width: 100%;
+padding: 16px 20px 16px 50px;
+background: var(--bg-surface);
+border: 2px solid var(--border-color);
+border-radius: 14px;
+color: #fff;
+font-size: 15px;
+outline: none;
+transition: all var(--transition-speed);
+}
+.search-input:focus {
+border-color: var(--accent-bright);
+box-shadow: 0 0 20px var(--accent-glow);
+}
+.search-icon {
+position: absolute;
+left: 18px;
+top: 50%;
+transform: translateY(-50%);
+font-size: 18px;
+color: var(--text-subtle);
+}
+/* ÍNDICE / TABLA DE CONTENIDOS */
+.toc-wrapper {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 16px;
+padding: 24px;
+margin-bottom: 35px;
+}
+.toc-title {
+font-size: 16px;
+font-weight: 700;
+color: var(--accent-bright);
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.toc-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 10px;
+}
+.toc-link {
+color: var(--text-muted);
+text-decoration: none;
+font-size: 13.5px;
+padding: 8px 12px;
+border-radius: 8px;
+background: rgba(0, 0, 0, 0.2);
+border: 1px solid transparent;
+transition: all var(--transition-speed);
+display: block;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.toc-link:hover {
+color: #fff;
+background: rgba(230, 0, 0, 0.2);
+border-color: var(--border-highlight);
+transform: translateX(4px);
+}
+/* SECCIONES DE TÉRMINOS */
+.term-card {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 16px;
+padding: 30px;
+margin-bottom: 25px;
+transition: all var(--transition-speed);
+position: relative;
+}
+.term-card:hover {
+border-color: var(--border-highlight);
+box-shadow: var(--shadow-red);
+background: var(--bg-card-hover);
+}
+.term-header {
+display: flex;
+align-items: center;
+gap: 12px;
+margin-bottom: 18px;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 12px;
+}
+.term-number {
+background: var(--accent-red);
+color: #fff;
+width: 32px;
+height: 32px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 900;
+font-size: 14px;
+flex-shrink: 0;
+box-shadow: 0 0 10px rgba(230, 0, 0, 0.4);
+}
+.term-title {
+font-size: 20px;
+font-weight: 700;
+color: #fff;
+}
+.term-content p {
+color: var(--text-muted);
+font-size: 14.5px;
+margin-bottom: 14px;
+}
+.term-content ul {
+margin-left: 20px;
+margin-bottom: 15px;
+color: var(--text-muted);
+}
+.term-content li {
+margin-bottom: 8px;
+font-size: 14px;
+}
+.term-content strong {
+color: #ffffff;
+}
+.highlight-box {
+background: rgba(255, 0, 0, 0.08);
+border-left: 4px solid var(--accent-red);
+padding: 14px 18px;
+border-radius: 0 10px 10px 0;
+margin: 15px 0;
+font-size: 13.5px;
+color: #ffcccc;
+}
+/* BANDEROLA DE ACEPTACIÓN */
+.acceptance-bar {
+position: fixed;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+width: 90%;
+max-width: 800px;
+background: rgba(25, 4, 4, 0.95);
+backdrop-filter: blur(12px);
+border: 2px solid var(--border-highlight);
+border-radius: 50px;
+padding: 15px 30px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 0, 0, 0.3);
+z-index: 999;
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.acceptance-bar.accepted {
+border-color: #00ff66;
+box-shadow: 0 0 20px rgba(0, 255, 102, 0.3);
+}
+.acceptance-text {
+font-size: 13.5px;
+color: var(--text-muted);
+font-weight: 500;
+}
+.btn-accept {
+background: linear-gradient(135deg, #ff0000, #cc0000);
+color: #fff;
+border: none;
+padding: 10px 24px;
+border-radius: 30px;
+font-weight: 700;
+font-size: 13.5px;
+cursor: pointer;
+white-space: nowrap;
+transition: all var(--transition-speed);
+box-shadow: 0 4px 15px rgba(255, 0, 0, 0.4);
+}
+.btn-accept:hover {
+transform: scale(1.05);
+box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
+}
+/* BOTÓN VOLVER ARRIBA */
+.btn-scroll-top {
+position: fixed;
+bottom: 90px;
+right: 25px;
+background: var(--bg-surface);
+color: var(--text-main);
+border: 1px solid var(--border-color);
+width: 44px;
+height: 44px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+transition: all var(--transition-speed);
+z-index: 900;
+opacity: 0;
+visibility: hidden;
+}
+.btn-scroll-top.visible {
+opacity: 1;
+visibility: visible;
+}
+.btn-scroll-top:hover {
+background: var(--accent-red);
+border-color: var(--accent-bright);
+transform: translateY(-3px);
+box-shadow: 0 5px 15px var(--accent-glow);
+}
+/* FOOTER */
+footer {
+text-align: center;
+padding: 40px 20px;
+border-top: 1px solid var(--border-color);
+color: var(--text-subtle);
+font-size: 13px;
+margin-top: 40px;
+}
+footer strong {
+color: var(--accent-bright);
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+.header-hero h1 {
+font-size: 26px;
+}
+.acceptance-bar {
+flex-direction: column;
+border-radius: 20px;
+text-align: center;
+padding: 18px 20px;
+bottom: 15px;
+}
+.btn-accept {
+width: 100%;
+}
+.term-card {
+padding: 20px;
+}
+.btn-scroll-top {
+bottom: 140px;
+right: 15px;
+}
+}
+</style>
+</head>
+<body>
+<!-- NAVEGACIÓN -->
+<nav>
+<a href="index.html" class="logo">
+Mr<span>Tube</span>
+</a>
+<div class="nav-actions">
+<button class="btn-nav" onclick="window.print()">🖨️ Imprimir</button>
+<a href="index.html" class="btn-nav">🏠 Volver a MrTube</a>
+</div>
+</nav>
+<div class="container">
+<!-- HEADER HERO -->
+<header class="header-hero">
+<span class="badge-tag">Plataforma ABG Productions®</span>
+<h1>Términos y Condiciones de Uso</h1>
+<p>Por favor, lee con atención este documento legal antes de navegar, interactuar o reproducir contenido audiovisual dentro de la plataforma MrTube.</p>
+<div class="last-updated">Última actualización: 20 de Septiembre de 2026 • Versión 2.4 Beta</div>
+</header>
+<!-- BÚSQUEDA INTERACTIVA -->
+<div class="search-box">
+<span class="search-icon">🔍</span>
+<input type="text" id="terms-search" class="search-input" placeholder="Buscar en los términos de uso (ej. descargas, derechos, beta, ADE)..." onkeyup="filtrarTerminos()">
+</div>
+<!-- ÍNDICE DE CONTENIDOS -->
+<div class="toc-wrapper">
+<div class="toc-title">📋 Índice de Secciones</div>
+<div class="toc-grid">
+<a href="#sec-1" class="toc-link">1. Aceptación de los Términos</a>
+<a href="#sec-2" class="toc-link">2. Naturaleza del Sitio y Fase Beta</a>
+<a href="#sec-3" class="toc-link">3. Propiedad Intelectual y Marcas</a>
+<a href="#sec-4" class="toc-link">4. Reglas de Uso Aceptable</a>
+<a href="#sec-5" class="toc-link">5. Función DV y Contenido Audiovisual</a>
+<a href="#sec-6" class="toc-link">6. Modalidades de Rendimiento (ADE y URS)</a>
+<a href="#sec-7" class="toc-link">7. Juegos y Proyectos Vinculados</a>
+<a href="#sec-8" class="toc-link">8. Configuración Local y Preferencias</a>
+<a href="#sec-9" class="toc-link">9. Limitación de Responsabilidad</a>
+<a href="#sec-10" class="toc-link">10. Contacto y Soporte Oficial</a>
+</div>
+</div>
+<!-- CONTENIDO DE TÉRMINOS -->
+<main id="terms-list">
+<!-- SECCIÓN 1 -->
+<article class="term-card" id="sec-1">
+<div class="term-header">
+<div class="term-number">1</div>
+<h2 class="term-title">Aceptación de los Términos</h2>
+</div>
+<div class="term-content">
+<p>Al acceder, navegar o utilizar la plataforma web independiente <strong>MrTube</strong> (operada bajo el sello de <strong>ABG Productions®</strong>), el usuario declara haber leído, comprendido y aceptado en su totalidad los presentes Términos de Uso.</p>
+<p>Si no estás de acuerdo con alguna de las disposiciones establecidas en este documento, te solicitamos abstenerte de hacer uso de la plataforma y sus servicios asociados.</p>
+</div>
+</article>
+<!-- SECCIÓN 2 -->
+<article class="term-card" id="sec-2">
+<div class="term-header">
+<div class="term-number">2</div>
+<h2 class="term-title">Naturaleza del Sitio y Estado Beta</h2>
+</div>
+<div class="term-content">
+<p><strong>MrTube</strong> se encuentra activamente en una <strong>Fase de Pruebas Técnicas y Optimización (Versión Beta)</strong>. En consecuencia:</p>
+<ul>
+<li>Algunos apartados y grillas de video pueden mostrar la etiqueta de <strong>"Próximamente"</strong> mientras se completa la indexación multimedia.</li>
+<li>Pueden presentarse interrupciones temporales, retrasos en dispositivos móviles o modificaciones en las funciones del reproductor integrado sin previo aviso.</li>
+<li>El equipo de desarrollo se reserva el derecho de corregir errores, actualizar componentes y ajustar la interfaz para garantizar la máxima estabilidad.</li>
+</ul>
+<div class="highlight-box">
+⚠️ <strong>Aviso Importante:</strong> MrTube es una plataforma de entretenimiento libre creada para la difusión de proyectos animados y contenidos de la comunidad.
+</div>
+</div>
+</article>
+<!-- SECCIÓN 3 -->
+<article class="term-card" id="sec-3">
+<div class="term-header">
+<div class="term-number">3</div>
+<h2 class="term-title">Propiedad Intelectual y Derechos de Autor</h2>
+</div>
+<div class="term-content">
+<p>Todo el contenido original publicado en MrTube —incluyendo pero no limitándose a las series animadas <em>"El Misterio de Chicken Gun"</em>, <em>"Sprunki Animado"</em>, <em>"Dandy's World Show"</em>, así como logotipos, diseños, personajes, animaciones y elementos gráficos— pertenece a <strong>ABG Productions®</strong> y/o <strong>Sprunki Animations Studios®</strong>.</p>
+<ul>
+<li>Queda estrictamente prohibida la resubida no autorizada de episodios completos a plataformas de terceros con fines de lucro económico.</li>
+<li>Se permite la creación de reaccionadores, fan arts y críticas siempre que se otorguen los créditos correspondientes al canal oficial de <strong>Mr.Jostin</strong>.</li>
+</ul>
+</div>
+</article>
+<!-- SECCIÓN 4 -->
+<article class="term-card" id="sec-4">
+<div class="term-header">
+<div class="term-number">4</div>
+<h2 class="term-title">Reglas de Uso Aceptable</h2>
+</div>
+<div class="term-content">
+<p>Al utilizar MrTube, el usuario se compromete formalmente a NO realizar ninguna de las siguientes acciones:</p>
+<ul>
+<li>Intentar descompilar, alterar o vulnerar el código fuente de la plataforma o sus minijuegos integrados.</li>
+<li>Utilizar herramientas automatizadas (bots o scrapers) de manera masiva que sobrecarguen los servidores.</li>
+<li>Difundir virus, código malicioso o explotar fallas técnicas con la intención de perjudicar a la comunidad.</li>
+</ul>
+</div>
+</article>
+<!-- SECCIÓN 5 -->
+<article class="term-card" id="sec-5">
+<div class="term-header">
+<div class="term-number">5</div>
+<h2 class="term-title">Función DV (Descarga de Video Seguro) e Integración con YouTube</h2>
+</div>
+<div class="term-content">
+<p>MrTube integra reproductores embebidos alojados de forma oficial a través de la infraestructura de YouTube. La herramienta identificada como <strong>DV (Descargador de Video Seguro)</strong> está destinada únicamente al acceso personal y offline de contenidos permitidos.</p>
+<p>MrTube cumple estrictamente con las políticas de API y derechos de visualización pública vigentes.</p>
+</div>
+</article>
+<!-- SECCIÓN 6 -->
+<article class="term-card" id="sec-6">
+<div class="term-header">
+<div class="term-number">6</div>
+<h2 class="term-title">Modalidades de Rendimiento (Sistemas ADE y URS)</h2>
+</div>
+<div class="term-content">
+<p>Para garantizar una navegación fluida en dispositivos con especificaciones reducidas, MrTube incorpora los algoritmos de optimización:</p>
+<ul>
+<li><strong>ADE (Ahorro de Recursos):</strong> Desactiva animaciones pesadas y sombras complejas.</li>
+<li><strong>URS (Ultra Rendimiento Supremo):</strong> Reduce el consumo visual al mínimo técnico, aplicando fondos negros absolutos y optimizando la carga de miniaturas.</li>
+</ul>
+<p>El uso de estas modalidades es totalmente opcional y puede gestionarse desde el menú de Ajustes ⚙️.</p>
+</div>
+</article>
+<!-- SECCIÓN 7 -->
+<article class="term-card" id="sec-7">
+<div class="term-header">
+<div class="term-number">7</div>
+<h2 class="term-title">Juegos y Proyectos Vinculados (ChapAI y JB)</h2>
+</div>
+<div class="term-content">
+<p>MrTube ofrece accesos directos e integraciones con proyectos colaborativos de la casa como <strong>ChapAI (Beta)</strong> y el juego de pruebas <strong>Chicken Strike NPC (JB)</strong>.</p>
+<p>El usuario reconoce que dichos proyectos cuentan con sus propias dinámicas de desarrollo experimental y que ABG Productions® trabaja continuamente en su mantenimiento.</p>
+</div>
+</article>
+<!-- SECCIÓN 8 -->
+<article class="term-card" id="sec-8">
+<div class="term-header">
+<div class="term-number">8</div>
+<h2 class="term-title">Configuración Local y Preferencias del Usuario</h2>
+</div>
+<div class="term-content">
+<p>Las preferencias seleccionadas dentro del panel de configuración (temas visuales rojo, azul, claro o gris, tipografía personalizada, sonido activado/desactivado y modo escritorio VC) se almacenan localmente en el navegador del usuario mediante <code>localStorage</code>.</p>
+<p>MrTube no recopila ni rastrea información personal privada sin el consentimiento explícito del usuario.</p>
+</div>
+</article>
+<!-- SECCIÓN 9 -->
+<article class="term-card" id="sec-9">
+<div class="term-header">
+<div class="term-number">9</div>
+<h2 class="term-title">Limitación de Responsabilidad</h2>
+</div>
+<div class="term-content">
+<p>Bajo ningún concepto <strong>MrTube</strong> ni sus administradores serán responsables por inconvenientes derivados de lentitud en conexiones de red de terceros, incompatibilidad con navegadores desactualizados o pérdida temporal del servicio durante periodos de actualización técnica.</p>
+</div>
+</article>
+<!-- SECCIÓN 10 -->
+<article class="term-card" id="sec-10">
+<div class="term-header">
+<div class="term-number">10</div>
+<h2 class="term-title">Contacto y Canales Oficiales</h2>
+</div>
+<div class="term-content">
+<p>Para dudas, aclaraciones de derechos, sugerencias o reporte de fallas dentro de la plataforma, los usuarios pueden comunicarse directamente a través de las redes y canal oficial de contenido:</p>
+<div class="highlight-box" style="text-align: center;">
+🔴 <strong>Canal Oficial de YouTube:</strong> <a href="https://youtube.com/@mr.jostin_oficial?si=wDrRGvnlRJUFWfWN" target="_blank" style="color: #ff6666; font-weight: bold; text-decoration: underline;">Mr.Jostin Oficial</a>
+</div>
+</div>
+</article>
+</main>
+</div>
+<!-- BOTÓN VOLVER ARRIBA -->
+<button id="btn-top" class="btn-scroll-top" onclick="volverArriba()" title="Volver arriba">⬆️</button>
+<!-- BARRA DE ACEPTACIÓN DE TÉRMINOS -->
+<div id="acceptance-bar" class="acceptance-bar">
+<div class="acceptance-text" id="acceptance-text">
+📌 Al continuar navegando en MrTube, confirmas que aceptas estos Términos de Uso.
+</div>
+<button id="btn-accept-terms" class="btn-accept" onclick="confirmarAceptacion()">Entendido y Aceptar</button>
+</div>
+<!-- FOOTER -->
+<footer>
+<p>© 2026 <strong>MrTube</strong> • Una producción original de <strong>ABG Productions®</strong></p>
+<p style="margin-top: 5px; font-size: 11px;">Diseñado para ofrecer la mejor experiencia en entretenimiento e innovación independiente.</p>
+</footer>
+<!-- SCRIPT INTERACTIVO -->
+<script>
+// BÚSQUEDA DINÁMICA DE TÉRMINOS
+function filtrarTerminos() {
+var input = document.getElementById('terms-search');
+var filter = input.value.toLowerCase();
+var cards = document.getElementsByClassName('term-card');
+for (var i = 0; i < cards.length; i++) {
+var text = cards[i].innerText.toLowerCase();
+if (text.includes(filter)) {
+cards[i].style.display = "";
+} else {
+cards[i].style.display = "none";
+}
+}
+}
+// CONFIRMACIÓN Y ESTADO DE ACEPTACIÓN
+function confirmarAceptacion() {
+var bar = document.getElementById('acceptance-bar');
+var text = document.getElementById('acceptance-text');
+var btn = document.getElementById('btn-accept-terms');
+localStorage.setItem('mrtube_terms_accepted', 'true');
+bar.classList.add('accepted');
+text.innerHTML = '✅ <strong>¡Términos Aceptados!</strong> Gracias por formar parte de la comunidad de MrTube.';
+text.style.color = '#88ffaa';
+btn.style.display = 'none';
+setTimeout(function() {
+bar.style.opacity = '0';
+bar.style.transform = 'translate(-50%, 50px)';
+setTimeout(function() {
+bar.style.display = 'none';
+}, 500);
+}, 3000);
+}
+// REVISAR SI YA FUERON ACEPTADOS
+window.addEventListener('DOMContentLoaded', function() {
+if (localStorage.getItem('mrtube_terms_accepted') === 'true') {
+var bar = document.getElementById('acceptance-bar');
+if (bar) bar.style.display = 'none';
+}
+});
+// BOTÓN SCROLL TOP
+window.onscroll = function() {
+var btnTop = document.getElementById('btn-top');
+if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+btnTop.classList.add('visible');
+} else {
+btnTop.classList.remove('visible');
+}
+};
+function volverArriba() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+}
+</script>
+</body>
+</html>
